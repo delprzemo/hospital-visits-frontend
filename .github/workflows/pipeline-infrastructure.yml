@@ -1,4 +1,4 @@
-name: React CI/CD Pipeline
+name: Hospital infrastructure deployment
 
 on:
   workflow_dispatch: # This enables manual triggering
