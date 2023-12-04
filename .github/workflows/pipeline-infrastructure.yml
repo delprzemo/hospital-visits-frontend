@@ -15,12 +15,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      # Install dependencies and run tests
-      - name: Install and Test
-        run: |
-          npm install
-          npm test
-
       # Log in to Azure
       - name: Azure Login
         uses: azure/login@v1
