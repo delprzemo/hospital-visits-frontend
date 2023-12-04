@@ -8,7 +8,7 @@ on:
 
 env:
   AZURE_STATIC_WEB_APP_NAME: 'swahospitalexercise'
-  REACT_APP_API_BASE_URL: ${{env.REACT_APP_API_BASE_URL}} 
+  REACT_APP_API_BASE_URL: 'https://hospitalvisitsexerciseapi.azurewebsites.net'
 
 jobs:
   build-and-deploy:
@@ -23,6 +23,10 @@ jobs:
         run: |
           npm install
           npm test
+        env:
+          REACT_APP_API_BASE_URL: ${{ env.AZURE_RESOURCE_GROUP }}
+
+
 
       # Log in to Azure
       - name: Azure Login
