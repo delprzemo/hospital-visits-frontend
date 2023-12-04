@@ -1,0 +1,17 @@
+.search-bar {
+  margin-bottom: 30px;
+
+  .input-group {
+    border: 1px solid lightgrey;
+  }
+
+  input {
+    border: none;
+  }
+
+  .input-group-text {
+    background-color: white;
+    border: none;
+    padding-top: 10px;
+  }
+}

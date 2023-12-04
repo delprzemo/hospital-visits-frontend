@@ -1,0 +1,30 @@
+.page-with-header {
+  .nav-item {
+    display: flex;
+  }
+
+  .back-btn {
+    margin-right: 30px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .content {
+    margin-top: 50px;
+    text-align: center;
+
+    .loading {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      top: 30%;
+
+      img {
+        max-height: 200px;
+      }
+    }
+  }
+}
