@@ -1,25 +1,19 @@
 name: Hospital infrastructure deployment
 
 on:
-  workflow_dispatch: # This enables manual triggering
+  workflow_dispatch:
 
 env:
   AZURE_STATIC_WEB_APP_NAME: 'swahospitalexercise'
   AZURE_RESOURCE_GROUP: 'Hospital'
 
 jobs:
-  build-and-deploy:
+  deploy-infrastructure:
     runs-on: ubuntu-latest
     environment: dev
 
     steps:
       - uses: actions/checkout@v2
-
-      # Install dependencies and run tests
-      - name: Install and Test
-        run: |
-          npm install
-          npm test
 
       # Log in to Azure
       - name: Azure Login
