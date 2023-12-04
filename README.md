@@ -12,7 +12,7 @@ To get started with the application, you need to set up your environment variabl
 
 `REACT_APP_API_BASE_URL=<Your API Base URL>`
 
-Replace `<Your API Base URL>` with the actual base URL of your API.
+Replace `<Your API Base URL>` with the actual base URL of your API (see [API repo](https://github.com/delprzemo/hospital-visits-api))
 
 Once you have set up your environment variables, you can install the dependencies and start the application using either npm or yarn:
 
