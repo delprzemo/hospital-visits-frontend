@@ -1,0 +1,37 @@
+name: Hospital infrastructure deployment
+
+on:
+  workflow_dispatch: # This enables manual triggering
+
+env:
+  AZURE_STATIC_WEB_APP_NAME: 'swahospitalexercise'
+  AZURE_RESOURCE_GROUP: 'Hospital'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: dev
+
+    steps:
+      - uses: actions/checkout@v2
+
+      # Install dependencies and run tests
+      - name: Install and Test
+        run: |
+          npm install
+          npm test
+
+      # Log in to Azure
+      - name: Azure Login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      # Deploy infrastructure using Bicep if not exists
+      - name: Deploy Infrastructure
+        run: |
+          az deployment group create \
+            --name reactDeployment \
+            --resource-group ${{ env.AZURE_RESOURCE_GROUP }} \
+            --template-file ./devops/swa.bicep \
+            --parameters staticWebAppName=$AZURE_STATIC_WEB_APP_NAME location=westeurope
