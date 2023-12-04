@@ -6,7 +6,6 @@ import { httpPost } from '../../api'
 import useHospitals from '../../hooks/useHospitals'
 import './Visits.scss'
 import SearchBar from '../../components/SearchBar/SearchBar'
-import Modal from '../../components/Modal/Modal'
 import VisitDetailsModal from './VisitDetailsModal'
 
 const Visits: React.FC = () => {
