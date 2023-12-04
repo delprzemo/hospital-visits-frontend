@@ -40,7 +40,7 @@ In this project, tests have been created only for the `SearchBar`` component. Ho
 
 The project includes two CI/CD pipelines defined in GitHub Actions:
 
-1. The first pipeline is responsible for building and deploying the static web app. It is triggered only manually. You can find the pipeline configuration in `.github/workflows/pipeline.yml`.
+1. The first pipeline is responsible for building and deploying application to the static web app. It is triggered after every push to main. You can find the pipeline configuration in `.github/workflows/pipeline.yml`.
 
 2. The second pipeline is responsible for deploying the infrastructure required for the application. It is triggered manually. You can find the pipeline configuration in `.github/workflows/pipeline-infrastructure.yml`.
 
