@@ -19,23 +19,23 @@ const VisitDetailsModal: React.FC<VisitDetailsModalProps> = ({
           <div className="row">
             <div className="col">
               <p>
-                <strong>Date:</strong>{' '}
+                <strong>Date:</strong>
                 <span className="text-muted">
                   {selectedVisit?.dateOfVisit.toString()}
                 </span>
               </p>
               <p>
-                <strong>Doctor:</strong>{' '}
+                <strong>Doctor:</strong>
                 <span className="text-muted">{selectedVisit?.doctor.name}</span>
               </p>
               <p>
-                <strong>Specialization:</strong>{' '}
+                <strong>Specialization:</strong>
                 <span className="text-muted">
                   {selectedVisit?.specialization}
                 </span>
               </p>
               <p>
-                <strong>Patient:</strong>{' '}
+                <strong>Patient:</strong>
                 <span className="text-muted">
                   {selectedVisit?.patient.name}
                 </span>
