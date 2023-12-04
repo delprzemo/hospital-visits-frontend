@@ -46,15 +46,16 @@ The project includes two CI/CD pipelines defined in GitHub Actions:
 
 ## Project Architecture and Standards
 
-The project follows a modular architecture with a clear separation of concerns. The main parts of the project are:
+The project follows an architecture with a clear separation of concerns. The main parts of the project are:
 
 - `src/pages`: This directory contains the main pages of the application.
 - `src/components`: This directory contains reusable components.
 - `src/store`: This directory contains the Redux store and reducers.
+- `src/hooks`: This directory contains hooks implementation
 - `src/api.ts`: This file contains the API calls.
 
 The project uses TypeScript and enforces strict typing. It also follows the rule of having a maximum of 10 imports per file.
 
-The project uses functional components and leverages the power of hooks for managing state and side effects. It also uses Redux for global state management.
+The project uses functional components and leverages the power of hooks for managing state and side effects
 
 The project uses SCSS for styling and follows a modular approach to CSS. Each component or page has its own SCSS file.
