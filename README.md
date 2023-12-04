@@ -1,46 +1,56 @@
-# Getting Started with Create React App
+# :hospital: Hospital Visits - React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that allows users to view and manage hospital visits. The application is built with TypeScript and follows strict typing rules. It uses functional components and leverages the power of Redux for state management.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started with the application, you need to set up your environment variables. Create a `.env` file in the root directory of the project and add the following:
 
-### `npm start`
+`REACT_APP_API_BASE_URL=<Your API Base URL>`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Replace `<Your API Base URL>` with the actual base URL of your API.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Once you have set up your environment variables, you can install the dependencies and start the application using either npm or yarn:
 
-### `npm test`
+`npm install`
+`npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+or
 
-### `npm run build`
+`yarn install`
+`yarn start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application will start and you can access it at http://localhost:3000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tests
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the tests, use the following command:
+`npm test`
+or
+`yarn test`
 
-### `npm run eject`
+The project uses Jest and React Testing Library for testing.
+In this project, tests have been created only for the `SearchBar`` component. However, it is recommended to create tests for other components and hooks in a similar manner.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## CI/CD Pipelines
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The project includes two CI/CD pipelines defined in GitHub Actions:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. The first pipeline is responsible for building and deploying the static web app. It is triggered on every push to the main branch. You can find the pipeline configuration in `.github/workflows/pipeline.yml`.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+2. The second pipeline is responsible for deploying the infrastructure required for the application. It is triggered manually. You can find the pipeline configuration in `.github/workflows/pipeline-infrastructure.yml`.
 
-## Learn More
+## Project Architecture and Standards
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The project follows a modular architecture with a clear separation of concerns. The main parts of the project are:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `src/pages`: This directory contains the main pages of the application.
+- `src/components`: This directory contains reusable components.
+- `src/store`: This directory contains the Redux store and reducers.
+- `src/api.ts`: This file contains the API calls.
+
+The project uses TypeScript and enforces strict typing. It also follows the rule of having a maximum of 10 imports per file.
+
+The project uses functional components and leverages the power of hooks for managing state and side effects. It also uses Redux for global state management.
+
+The project uses SCSS for styling and follows a modular approach to CSS. Each component or page has its own SCSS file.
