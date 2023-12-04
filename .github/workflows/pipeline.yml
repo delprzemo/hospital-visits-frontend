@@ -26,8 +26,6 @@ jobs:
         env:
           REACT_APP_API_BASE_URL: ${{ env.AZURE_RESOURCE_GROUP }}
 
-
-
       # Log in to Azure
       - name: Azure Login
         uses: azure/login@v1
