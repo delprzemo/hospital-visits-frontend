@@ -1,9 +1,7 @@
 name: React CI/CD Pipeline
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch: # This enables manual triggering
 
 env:
   AZURE_STATIC_WEB_APP_NAME: 'swahospitalexercise'
