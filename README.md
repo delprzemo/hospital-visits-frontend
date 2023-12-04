@@ -2,6 +2,10 @@
 
 This is a React application that allows users to view and manage hospital visits. The application is built with TypeScript and follows strict typing rules. It uses functional components and leverages the power of Redux for state management.
 
+## Demo
+
+You can access the live demo of the application at [this link](https://salmon-hill-01767c303.4.azurestaticapps.net).
+
 ## Getting Started
 
 To get started with the application, you need to set up your environment variables. Create a `.env` file in the root directory of the project and add the following:
