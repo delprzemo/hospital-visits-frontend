@@ -17,6 +17,7 @@ const useHospitals = () => {
   const dispatch = useDispatch<AppDispatch>()
 
   const fetchData = useCallback(async () => {
+    if(hospitals?.length > 0) return
     dispatch(hospitalsFetchingStarted())
     const result = await httpGet<Hospital[]>('hospital')
 
@@ -25,7 +26,7 @@ const useHospitals = () => {
     }
 
     dispatch(hospitalsFetchingFinished())
-  }, [dispatch])
+  }, [dispatch, hospitals])
 
   const getHospitals = fetchData
 
